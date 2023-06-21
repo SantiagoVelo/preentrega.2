@@ -1,0 +1,66 @@
+/* Estilos adicionales personalizados */
+
+body {
+  padding-top: 80px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.btn-primary-sm {
+  font-size: 0.8rem;
+}
+
+section#formulario {
+  background-color: #f7f7f7;
+}
+
+section#opiniones {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Estilos adicionales para la sección de servicios */
+
+.services {
+  background-color: #f9f9f9;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Estilos adicionales para el footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}

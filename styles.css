@@ -1,0 +1,70 @@
+/* Estilos para el archivo index.html */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #ccc;
+}
+
+header {
+  background-color: #222;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
