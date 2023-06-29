@@ -1,0 +1,30 @@
+/* Mixin para estilos de título */
+@mixin title-styles {
+  text-align: center;
+  margin-top: 100px;
+  color: #000;
+}
+
+/* Mixin para estilos de subtítulo */
+@mixin subtitle-styles {
+  text-align: center;
+  margin-bottom: 100px;
+  color: #000;
+}
+
+/* Mixin para estilos de imagen centrada */
+@mixin centered-image-styles {
+  text-align: center;
+}
+
+/* Mixin para estilos de enlaces de redes sociales */
+@mixin social-link-styles {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+/* Mixin para estilos de hover en enlaces de redes sociales */
+@mixin social-link-hover-styles {
+  color: rgba(255, 255, 255, 0.75);
+}

@@ -1,0 +1,10 @@
+body {
+  font-family: $font-family;
+  header {
+    background-image: url("../imagenes/fondo.png");
+    height: 200px;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
