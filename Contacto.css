@@ -1,7 +1,9 @@
 /* Estilos adicionales personalizados */
 
 body {
-  padding-top: 80px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  color: black;
 }
 
 .navbar-brand {
@@ -12,9 +14,26 @@ body {
   font-size: 0.8rem;
 }
 
-section.contact-section {
+.header {
+  position: relative;
   background-color: #f7f7f7;
-  padding: 80px 0;
+  padding: 120px 0 80px; /* Aumenta el padding para separar más el navbar y la sección de contacto */
+  text-align: center;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-title {
+  margin-top: 0;
+  color: #333;
+}
+
+.contact-section {
+  background-color: #f7f7f7;
+  padding: 80px 0; /* Aumenta el padding para separar más el navbar y la sección de contacto */
 }
 
 .footer {
@@ -35,4 +54,10 @@ section.contact-section {
   height: 2px;
   background-color: #ccc;
   margin: 40px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }

@@ -3,13 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pemul.Store - Servicios</title>
-    <link rel="stylesheet" href="../Servicios.css" />
-    <!-- CSS de Bootstrap -->
+    <meta
+      name="description"
+      content="Somos una tienda de celulares especializada en ofrecer respuestas a tus preguntas sobre dispositivos móviles y accesorios."
+    />
+    <meta
+      name="keywords"
+      content="celulares, preguntas, respuestas, dispositivos móviles, accesorios, tienda"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="../imgs/logo.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../servicios.css" />
+    <style>
+      /* Estilos adicionales personalizados */
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        color: black;
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+      }
+
+      .btn-primary-sm {
+        font-size: 0.8rem;
+      }
+
+      .header {
+        position: relative;
+        background-color: #f7f7f7;
+        padding: 120px 0 80px; /* Aumenta el padding para separar más el navbar y la sección de contacto */
+        text-align: center;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .header-title {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .contact-section {
+        background-color: #f7f7f7;
+        padding: 80px 0; /* Aumenta el padding para separar más el navbar y la sección de contacto */
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 40px 0;
+        margin-top: 80px;
+      }
+
+      .footer a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .section-divider {
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        margin: 40px 0;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    </style>
+    <title>Pemul.Store - Servicios</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-primary fixed-top py-4">
@@ -29,21 +114,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="servicio.html" href="#"
-                >Servicio</a
-              >
+              <a class="nav-link" aria-current href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.html">Faq</a>
+              <a class="nav-link" href="Faq.html">Faq</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="productos.html">Productos</a>
+              <a class="nav-link" href="Productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="Contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Inicio</a>
+              <a class="nav-link active" href="Servicios.html">Servicio</a>
             </li>
           </ul>
         </div>
@@ -54,10 +137,9 @@
       <div class="container">
         <h1>Nuestros Servicios</h1>
         <p class="lead my-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic quam
-          natus saepe ipsam ratione similique, numquam voluptatibus fugiat
-          repellendus odio distinctio nesciunt quos repudiandae fugit facilis.
-          Maxime, ratione non?
+          Somos una empresa especializada en la venta de productos Apple.
+          Ofrecemos una amplia gama de servicios para satisfacer tus necesidades
+          tecnológicas.
         </p>
       </div>
     </section>
@@ -71,8 +153,8 @@
               <div class="service-content">
                 <h5 class="service-title">Venta de Celulares</h5>
                 <p class="service-description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Nulla explicabo minus totam nam, rem rerum?
+                  Ofrecemos una variedad de modelos de celulares Apple de última
+                  generación. Encuentra el dispositivo perfecto para ti.
                 </p>
                 <a href="#" class="btn btn-primary">Más información</a>
               </div>
@@ -84,8 +166,9 @@
               <div class="service-content">
                 <h5 class="service-title">Reparación y Mantenimiento</h5>
                 <p class="service-description">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Excepturi magni esse quia ipsum, inventore repellendus!
+                  Brindamos servicios de reparación y mantenimiento para
+                  dispositivos Apple. Nuestro equipo de expertos te ayudará a
+                  solucionar cualquier problema.
                 </p>
                 <a href="#" class="btn btn-primary">Más información</a>
               </div>
@@ -97,8 +180,9 @@
               <div class="service-content">
                 <h5 class="service-title">Asesoramiento Personalizado</h5>
                 <p class="service-description">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Sapiente earum voluptas labore delectus perspiciatis? Nobis!
+                  Nuestro equipo está disponible para brindarte asesoramiento
+                  personalizado en la elección y configuración de tus
+                  dispositivos Apple.
                 </p>
                 <a href="#" class="btn btn-primary">Más información</a>
               </div>
@@ -109,26 +193,30 @@
     </section>
 
     <footer class="footer bg-primary text-light p-3">
-      <div class="container">
-          <p>
-            © 2023 Pemul.Store. Todos los derechos reservados. |
-            <a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a>
-          </p>
-        </div>
-              <div class="social-links">
-                <a href="#" class="social-link"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-  
+      <div class="container text-center">
+        <p>
+          © 2023 Pemul.Store. Todos los derechos reservados. |
+          <a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a>
+        </p>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/profile.php?id=100064279533014"
+          class="social-link"
+        >
+          <img src="../imagenes/facebook logo.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/pemul.store/" class="social-link">
+          <img src="../imagenes/instagram logo.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.google.com/maps/place/Av.+Avellaneda+1240,+Buenos+Aires"
+          class="social-link"
+        >
+          <img src="../imagenes/geo logo.svg" alt="Google Maps" />
+        </a>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

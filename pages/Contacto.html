@@ -20,21 +20,24 @@
     />
     <link rel="shortcut icon" href="../imgs/logo.ico" type="image/x-icon" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dosis&family=Pathway+Extreme&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../Faq.css" />
+    <link rel="stylesheet" href="../Contacto.css" />
     <style>
       /* Estilos adicionales personalizados */
 
       body {
-        padding-top: 80px;
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        color: black;
       }
 
       .navbar-brand {
@@ -45,9 +48,26 @@
         font-size: 0.8rem;
       }
 
-      section.contact-section {
+      .header {
+        position: relative;
         background-color: #f7f7f7;
-        padding: 80px 0;
+        padding: 120px 0 80px; /* Aumenta el padding para separar más el navbar y la sección de contacto */
+        text-align: center;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .header-title {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .contact-section {
+        background-color: #f7f7f7;
+        padding: 80px 0; /* Aumenta el padding para separar más el navbar y la sección de contacto */
       }
 
       .footer {
@@ -68,6 +88,12 @@
         height: 2px;
         background-color: #ccc;
         margin: 40px 0;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
       }
     </style>
     <title>Contacto | Tienda de Celulares</title>
@@ -90,9 +116,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="Contacto.html" href="#"
-                >Contacto</a
-              >
+              <a class="nav-link" aria-current href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Faq.html">Faq</a>
@@ -101,74 +125,73 @@
               <a class="nav-link" href="Productos.html">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Servicios.html">Servicios</a>
+              <a class="nav-link active" href="Contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Inicio</a>
+              <a class="nav-link" href="Servicios.html">Servicio</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main>
-      <section class="contact-section text-center">
-        <div class="container">
-          <h2 class="section-title">Contáctanos!</h2>
-          <div class="section-divider"></div>
-          <div class="row justify-content-center">
-            <div class="col-md-6">
-              <h3>Información de contacto</h3>
-              <p>
-                Si tienes alguna pregunta o consulta, no dudes en contactarnos.
-                Estamos aquí para ayudarte.
-              </p>
-              <ul>
-                <li>
-                  <i class="fas fa-map-marker-alt"></i> Av. Avellaneda 1240,
-                  Buenos Aires
-                </li>
-                <li><i class="fas fa-phone"></i> Teléfono: 18222022</li>
-                <li>
-                  <i class="fas fa-envelope"></i> Correo electrónico:
-                  pemul.store@gmail.com
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h3>Formulario de contacto</h3>
-              <form>
-                <div class="form-group">
-                  <label for="name">Nombre</label>
-                  <input type="text" id="name" class="form-control" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Correo electrónico</label>
-                  <input
-                    type="email"
-                    id="email"
-                    class="form-control"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="message">Mensaje</label>
-                  <textarea
-                    id="message"
-                    class="form-control"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  Enviar mensaje
-                </button>
-              </form>
-            </div>
+    <header class="header">
+      <div class="header-overlay"></div>
+      <div class="container text-center header-content">
+        <h1 class="header-title">¡Contáctanos!</h1>
+        <div class="section-divider"></div>
+      </div>
+    </header>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Información de contacto</h3>
+            <p>
+              Si tienes alguna pregunta o consulta, no dudes en contactarnos.
+              Estamos aquí para ayudarte.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Av. Avellaneda 1240,
+                Buenos Aires
+              </li>
+              <li><i class="fas fa-phone"></i> Teléfono: 18222022</li>
+              <li>
+                <i class="fas fa-envelope"></i> Correo electrónico:
+                pemul.store@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <h3>Formulario de contacto</h3>
+            <form>
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Enviar mensaje
+              </button>
+            </form>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <footer class="footer bg-primary text-light p-3">
       <div class="container text-center">
@@ -178,17 +201,22 @@
         </p>
       </div>
       <div class="social-links">
-        <a href="#" class="social-link"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-link"
-          ><i class="fab fa-instagram"></i
-        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100064279533014"
+          class="social-link"
+        >
+          <img src="../imagenes/facebook logo.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/pemul.store/" class="social-link">
+          <img src="../imagenes/instagram logo.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.google.com/maps/place/Av.+Avellaneda+1240,+Buenos+Aires"
+          class="social-link"
+        >
+          <img src="../imagenes/geo logo.svg" alt="Google Maps" />
+        </a>
       </div>
-    </div>
-  </div>
-</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

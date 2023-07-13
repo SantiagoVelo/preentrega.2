@@ -3,279 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preguntas y Respuestas | Tienda de Celulares</title>
+    <meta
+      name="description"
+      content="Somos una tienda de celulares especializada en ofrecer respuestas a tus preguntas sobre dispositivos móviles y accesorios."
+    />
+    <meta
+      name="keywords"
+      content="celulares, preguntas, respuestas, dispositivos móviles, accesorios, tienda"
+    />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="../imgs/logo.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="../Faq.css" />
-    <script
-      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/grids-css@4.2.3/grids.min.css"
+    />
     <style>
-      /* Estilos generales */
+      /* Estilos adicionales personalizados */
+
       body {
-        font-family: "Dosis", sans-serif;
-        color: #000;
-        padding-top: 80px;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .section-title {
-        color: #007bff;
-      }
-
-      /* Estilos de encabezado */
-      header {
-        background-color: #007bff;
-        color: #fff;
-        padding: 20px;
-      }
-
-      .navbar {
-        background-color: #007bff;
-        justify-content: flex-end;
-      }
-
-      .navbar .nav-link {
-        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        padding-top: 160px;
       }
 
       .navbar-brand {
         font-weight: bold;
       }
 
-      /* Estilos de acordeón */
-      .accordion-button {
-        background-color: #007bff;
-        color: #fff;
+      .btn-primary-sm {
+        font-size: 0.8rem;
       }
 
-      .accordion-button[aria-expanded="true"] {
-        background-color: #0056b3;
+      section.contact-section {
+        background-color: #f7f7f7;
+        padding: 80px 0;
       }
 
-      .accordion-body {
-        background-color: #f8f9fa;
-        color: #333;
-      }
-
-      /* Estilos de pie de página */
       .footer {
         background-color: #333;
         color: #fff;
         text-align: center;
-        padding: 20px 0;
+        padding: 40px 0;
+        margin-top: 80px;
       }
 
-      .social-link {
+      .footer a {
         color: #fff;
-        margin-right: 10px;
         text-decoration: underline;
       }
 
-      /* Estilos adicionales personalizados */
-      section#formulario {
-        background-color: #f7f7f7;
+      .section-divider {
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        margin: 40px 0;
       }
 
-      section#opiniones {
-        padding-top: 80px;
-        padding-bottom: 80px;
-      }
-
-      .services {
-        background-color: #f9f9f9;
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-
-      .service {
+      /* Estilos específicos de la página de Preguntas y Respuestas */
+      body {
         text-align: center;
-        margin-bottom: 30px;
       }
 
-      .service-image {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 20px;
+      h1 {
+        font-weight: bold;
       }
 
-      .service-title {
-        font-size: 20px;
+      .question {
+        cursor: pointer;
         font-weight: bold;
         margin-bottom: 10px;
+        text-align: center;
       }
 
-      .service-description {
-        color: #555;
-        margin-bottom: 15px;
+      .answer {
+        display: none;
+        text-align: center;
+      }
+
+      #map {
+        height: 400px;
+        margin-top: 20px;
       }
     </style>
+    <script>
+      function toggleAnswer(index) {
+        var answer = document.getElementsByClassName("answer")[index];
+        if (answer.style.display === "none") {
+          answer.style.display = "block";
+        } else {
+          answer.style.display = "none";
+        }
+      }
+    </script>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">Tienda de Celulares</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#formulario">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#opiniones">Opiniones</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section id="formulario">
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top py-4">
       <div class="container">
-        <h2 class="section-title">Formulario de Contacto</h2>
-        <form>
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" />
-          </div>
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="opiniones">
-      <div class="container">
-        <h2 class="section-title">Opiniones de nuestros clientes</h2>
-        <div class="accordion" id="accordionOpiniones">
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="opinion1Heading">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#opinion1Collapse"
-                aria-expanded="true"
-                aria-controls="opinion1Collapse"
-              >
-                Opinión 1
-              </button>
-            </h3>
-            <div
-              id="opinion1Collapse"
-              class="accordion-collapse collapse show"
-              aria-labelledby="opinion1Heading"
-              data-bs-parent="#accordionOpiniones"
-            >
-              <div class="accordion-body">
-                Esta es la opinión de un cliente satisfecho. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Integer lobortis, lacus a
-                mattis rhoncus, elit ligula dignissim nunc, eu ullamcorper
-                mauris arcu eget mi.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="opinion2Heading">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#opinion2Collapse"
-                aria-expanded="false"
-                aria-controls="opinion2Collapse"
-              >
-                Opinión 2
-              </button>
-            </h3>
-            <div
-              id="opinion2Collapse"
-              class="accordion-collapse collapse"
-              aria-labelledby="opinion2Heading"
-              data-bs-parent="#accordionOpiniones"
-            >
-              <div class="accordion-body">
-                Esta es otra opinión de un cliente satisfecho. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Integer lobortis, lacus a
-                mattis rhoncus, elit ligula dignissim nunc, eu ullamcorper
-                mauris arcu eget mi.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="opinion3Heading">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#opinion3Collapse"
-                aria-expanded="false"
-                aria-controls="opinion3Collapse"
-              >
-                Opinión 3
-              </button>
-            </h3>
-            <div
-              id="opinion3Collapse"
-              class="accordion-collapse collapse"
-              aria-labelledby="opinion3Heading"
-              data-bs-parent="#accordionOpiniones"
-            >
-              <div class="accordion-body">
-                Esta es otra opinión de un cliente satisfecho. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Integer lobortis, lacus a
-                mattis rhoncus, elit ligula dignissim nunc, eu ullamcorper
-                mauris arcu eget mi.
-              </div>
-            </div>
-          </div>
+        <a class="navbar-brand" href="#">Pemul.Store</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Faq.html">Faq</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Servicios.html">Servicio</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="social-links">
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>Tienda de Celulares &copy; 2023. Todos los derechos reservados.</p>
+    <div class="container grid-lg">
+      <h1>Preguntas Frecuentes</h1>
+
+      <hr class="section-divider" />
+      <!-- Línea separadora -->
+
+      <div class="question" onclick="toggleAnswer(0)">
+        ¿Cuáles son los métodos de pago aceptados?
+      </div>
+      <div class="answer">
+        Aceptamos pagos con tarjeta de crédito, transferencia bancaria y PayPal.
+      </div>
+
+      <div class="question" onclick="toggleAnswer(1)">
+        ¿Cuál es la ubicación de Pemul.Store?
+      </div>
+      <div class="answer">
+        Nos encontramos en la siguiente dirección: Av. Avellaneda 1240, Buenos
+        Aires.
+      </div>
+
+      <div class="question" onclick="toggleAnswer(2)">
+        ¿Cuál es el plazo de entrega de los pedidos?
+      </div>
+      <div class="answer">
+        El plazo de entrega suele ser de 3 a 5 días hábiles, pero puede variar
+        según la ubicación y el método de envío seleccionado.
+      </div>
+
+      <div class="question" onclick="toggleAnswer(3)">
+        ¿Cómo puedo realizar un seguimiento de mi pedido?
+      </div>
+      <div class="answer">
+        Una vez que tu pedido haya sido enviado, recibirás un correo electrónico
+        con un enlace de seguimiento. Puedes hacer clic en ese enlace para
+        rastrear el estado de tu envío.
+      </div>
+
+      <div class="question" onclick="toggleAnswer(4)">
+        ¿Cuál es la política de devoluciones de Pemul.Store?
+      </div>
+      <div class="answer">
+        Aceptamos devoluciones dentro de los 30 días posteriores a la recepción
+        del producto. Para obtener más información, por favor consulta nuestra
+        política de devoluciones en nuestro sitio web.
+      </div>
+
+      <div class="question" onclick="toggleAnswer(5)">
+        ¿Ofrecen descuentos para compras al por mayor?
+      </div>
+      <div class="answer">
+        favor, ponte en contacto con nuestro equipo de ventas para obtener más
+        detalles.
+      </div>
+    </div>
+
+    <footer class="footer bg-primary text-light p-3">
+      <div class="container text-center">
+        <p>
+          © 2023 Pemul.Store. Todos los derechos reservados. |
+          <a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a>
+        </p>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/profile.php?id=100064279533014"
+          class="social-link"
+        >
+          <img src="../imagenes/facebook logo.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/pemul.store/" class="social-link">
+          <img src="../imagenes/instagram logo.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.google.com/maps/place/Av.+Avellaneda+1240,+Buenos+Aires"
+          class="social-link"
+        >
+          <img src="../imagenes/geo logo.svg" alt="Google Maps" />
+        </a>
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-mDBL2LMA2bK8oln6vQTVGnFLDPjEYWBu2MEtUM9R3FqRH7LqshItEac3xEx8lq0B"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

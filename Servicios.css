@@ -1,11 +1,14 @@
 /* Estilos adicionales personalizados */
-
 body {
   padding-top: 80px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  color: black;
 }
 
 .navbar-brand {
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn-primary-sm {

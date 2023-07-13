@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- SEO on-page -->
     <meta
@@ -23,124 +27,14 @@
 
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="../Productos.css" />
-    <title>Pemul.Store - Preguntas frecuentes</title>
-    <style>
-      body {
-        font-family: "Dosis", sans-serif;
-        margin: 0;
-        padding: 0;
-        color: black;
-      }
-
-      header {
-        background-color: #007bff;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #000;
-      }
-
-      header img {
-        width: 100px;
-      }
-
-      header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-      }
-
-      header nav ul li a {
-        color: #000;
-        text-decoration: none;
-      }
-
-      .categories {
-        margin: 2rem;
-      }
-
-      h1 {
-        color: #007bff;
-        margin-bottom: 1rem;
-      }
-
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      ul li {
-        margin-bottom: 0.5rem;
-        cursor: pointer;
-      }
-
-      h2 {
-        color: #007bff;
-        margin-bottom: 1rem;
-      }
-
-      .product-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .product {
-        width: 200px;
-        margin: 1rem;
-        text-align: center;
-      }
-
-      .product img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 0.5rem;
-        cursor: pointer;
-        transition: transform 0.3s;
-      }
-
-      .product img:hover {
-        transform: scale(1.05);
-      }
-
-      .footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        margin-top: 5rem;
-      }
-
-      .footer a {
-        color: #fff;
-        text-decoration: underline;
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        margin-top: 10px;
-      }
-
-      .social-link {
-        color: #fff;
-        font-size: 20px;
-      }
-
-      .social-link i {
-        transition: color 0.3s;
-      }
-
-      .social-link:hover i {
-        color: rgba(255, 255, 255, 0.75);
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/grids-css@4.2.3/grids.min.css"
+    />
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-primary fixed-top py-2">
+      <nav class="navbar navbar-expand-lg bg-primary fixed-top py-4">
         <div class="container">
           <a class="navbar-brand" href="#">Pemul.Store</a>
           <button
@@ -157,24 +51,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="productos.html"
-                  href="#"
-                  >Productos</a
-                >
+                <a class="nav-link" aria-current href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Faq.html">Faq</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Servicios.html">Servicios</a>
+                <a class="nav-link active" href="Productos.html">Productos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Contacto.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Inicio</a>
+                <a class="nav-link" href="Servicios.html">Servicio</a>
               </li>
             </ul>
           </div>
@@ -183,7 +72,7 @@
     </header>
 
     <div class="categories">
-      <h1>Categorías de productos</h1>
+      <h1>Categoría de productos</h1>
       <ul>
         <li onclick="showMessage('Celulares')">Celulares</li>
         <li onclick="showMessage('Auriculares')">Auriculares</li>
@@ -197,33 +86,49 @@
 
     <div class="models mt-5">
       <h2>Modelos</h2>
-      <div class="product-container">
+      <div class="separator"></div>
+      <div class="product-container gsf-grid">
         <div class="product">
-          <img src="imagen1.jpg" alt="Imagen 1" />
+          <img src="../imagenes/iphone1.png" alt="Iphone" />
         </div>
         <div class="product">
-          <img src="imagen2.jpg" alt="Imagen 2" />
+          <img src="../imagenes/Macbook.jpg" alt="MackBook" />
         </div>
         <div class="product">
-          <img src="imagen3.jpg" alt="Imagen 3" />
+          <img src="../imagenes/Airpods.png" alt="Airpods" />
         </div>
         <div class="product">
-          <img src="imagen4.jpg" alt="Imagen 4" />
+          <img src="../imagenes/iphones mas.png" alt="Iphone" />
+        </div>
+        <div class="product">
+          <img src="../imagenes/cargador2.jpg" alt="Cargador" />
         </div>
       </div>
     </div>
 
     <footer class="footer bg-primary text-light p-3">
-      <div class="container">
+      <div class="container text-center">
         <p>
           © 2023 Pemul.Store. Todos los derechos reservados. |
           <a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a>
         </p>
       </div>
       <div class="social-links">
-        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100064279533014"
+          class="social-link"
+        >
+          <img src="../imagenes/facebook logo.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/pemul.store/" class="social-link">
+          <img src="../imagenes/instagram logo.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.google.com/maps/place/Av.+Avellaneda+1240,+Buenos+Aires"
+          class="social-link"
+        >
+          <img src="../imagenes/geo logo.svg" alt="Google Maps" />
+        </a>
       </div>
     </footer>
 
